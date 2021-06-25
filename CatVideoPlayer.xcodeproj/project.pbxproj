@@ -15,6 +15,10 @@
 		A32531E9267AC2FE007ACEFC /* CatVideoPlayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A32531E7267AC2FE007ACEFC /* CatVideoPlayer.xcdatamodeld */; };
 		A32531F3267AC2FE007ACEFC /* CatVideoPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32531F2267AC2FE007ACEFC /* CatVideoPlayerTests.swift */; };
 		A32531FD267AC2FE007ACEFC /* CatVideoPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32531FC267AC2FE007ACEFC /* CatVideoPlayerUITests.swift */; };
+		A3253210267ACA47007ACEFC /* GAME_Catching_Mice.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A325320F267AC9DA007ACEFC /* GAME_Catching_Mice.mp4 */; };
+		A34621E926856C05007FAACC /* VidePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34621E826856C05007FAACC /* VidePlayerViewController.swift */; };
+		A34621EC26856C37007FAACC /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34621EB26856C37007FAACC /* VideoPlayerView.swift */; };
+		A34621F426857176007FAACC /* VideosListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34621F326857176007FAACC /* VideosListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		A32531F2267AC2FE007ACEFC /* CatVideoPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatVideoPlayerTests.swift; sourceTree = "<group>"; };
 		A32531F8267AC2FE007ACEFC /* CatVideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatVideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32531FC267AC2FE007ACEFC /* CatVideoPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatVideoPlayerUITests.swift; sourceTree = "<group>"; };
+		A325320F267AC9DA007ACEFC /* GAME_Catching_Mice.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GAME_Catching_Mice.mp4; sourceTree = "<group>"; };
+		A34621E826856C05007FAACC /* VidePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VidePlayerViewController.swift; sourceTree = "<group>"; };
+		A34621EB26856C37007FAACC /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		A34621F326857176007FAACC /* VideosListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,11 +104,10 @@
 		A32531DB267AC2FD007ACEFC /* CatVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				A32531DC267AC2FD007ACEFC /* CatVideoPlayerApp.swift */,
-				A32531DE267AC2FD007ACEFC /* ContentView.swift */,
-				A32531E0267AC2FE007ACEFC /* Assets.xcassets */,
-				A32531E5267AC2FE007ACEFC /* Persistence.swift */,
-				A32531E7267AC2FE007ACEFC /* CatVideoPlayer.xcdatamodeld */,
+				A34621ED26856CEF007FAACC /* App */,
+				A34621E726856BDC007FAACC /* Controllers */,
+				A34621EE26856D1E007FAACC /* Library */,
+				A34621F2268570F4007FAACC /* Views */,
 				A32531E2267AC2FE007ACEFC /* Preview Content */,
 			);
 			path = CatVideoPlayer;
@@ -128,6 +135,83 @@
 				A32531FC267AC2FE007ACEFC /* CatVideoPlayerUITests.swift */,
 			);
 			path = CatVideoPlayerUITests;
+			sourceTree = "<group>";
+		};
+		A325320D267AC9C3007ACEFC /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				A325320F267AC9DA007ACEFC /* GAME_Catching_Mice.mp4 */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		A34621E726856BDC007FAACC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A34621F126856E01007FAACC /* VideoPlayer */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A34621EA26856C33007FAACC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A34621EB26856C37007FAACC /* VideoPlayerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A34621ED26856CEF007FAACC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A32531DC267AC2FD007ACEFC /* CatVideoPlayerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A34621EE26856D1E007FAACC /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				A34621EF26856D34007FAACC /* Assets */,
+				A34621F026856D5B007FAACC /* Persistence */,
+				A325320D267AC9C3007ACEFC /* Videos */,
+				A34621EA26856C33007FAACC /* Views */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		A34621EF26856D34007FAACC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A32531E0267AC2FE007ACEFC /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A34621F026856D5B007FAACC /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				A32531E5267AC2FE007ACEFC /* Persistence.swift */,
+				A32531E7267AC2FE007ACEFC /* CatVideoPlayer.xcdatamodeld */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		A34621F126856E01007FAACC /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				A34621E826856C05007FAACC /* VidePlayerViewController.swift */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		A34621F2268570F4007FAACC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A32531DE267AC2FD007ACEFC /* ContentView.swift */,
+				A34621F326857176007FAACC /* VideosListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3253210267ACA47007ACEFC /* GAME_Catching_Mice.mp4 in Resources */,
 				A32531E4267AC2FE007ACEFC /* Preview Assets.xcassets in Resources */,
 				A32531E1267AC2FE007ACEFC /* Assets.xcassets in Resources */,
 			);
@@ -260,9 +345,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A34621F426857176007FAACC /* VideosListView.swift in Sources */,
 				A32531E6267AC2FE007ACEFC /* Persistence.swift in Sources */,
 				A32531DF267AC2FD007ACEFC /* ContentView.swift in Sources */,
 				A32531DD267AC2FD007ACEFC /* CatVideoPlayerApp.swift in Sources */,
+				A34621EC26856C37007FAACC /* VideoPlayerView.swift in Sources */,
+				A34621E926856C05007FAACC /* VidePlayerViewController.swift in Sources */,
 				A32531E9267AC2FE007ACEFC /* CatVideoPlayer.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CatVideoPlayer/Preview Content\"";
+				DEVELOPMENT_TEAM = XBJV9DRMC3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -452,6 +541,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CatVideoPlayer/Preview Content\"";
+				DEVELOPMENT_TEAM = XBJV9DRMC3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

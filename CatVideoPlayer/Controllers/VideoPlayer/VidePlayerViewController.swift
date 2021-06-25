@@ -86,6 +86,15 @@ final class VidePlayerViewController: UIViewController {
         return button
     }()
     
+    private lazy var dismissButton: UIButton = {
+        let imageConfiguration = UIImage.SymbolConfiguration(pointSize: 18, weight: .bold, scale: .large)
+
+        let button = InteractionButton(normalImage: UIImage(systemName: "xmark", withConfiguration: imageConfiguration))
+        button.addTarget(self, action: #selector(actionDismiss(_:)), for: .touchUpInside)
+        
+        return button
+    }()
+    
     private let videoPlayerView: URLVideoPlayerView
     
     
@@ -133,7 +142,7 @@ final class VidePlayerViewController: UIViewController {
     private func setupButtons() {
         let buttonHeight: CGFloat = 40
 
-        let actionButtons = [toggleGravityButton, replayVideoButton, togglePlayStateButton, lockInteractionsButton]
+        let actionButtons = [dismissButton, toggleGravityButton, replayVideoButton, togglePlayStateButton, lockInteractionsButton]
         /// Need to add buttons in specific order, for proper animation overlap
         actionButtons.forEach { button in
             button.translatesAutoresizingMaskIntoConstraints = false
@@ -160,7 +169,7 @@ final class VidePlayerViewController: UIViewController {
         sender.isSelected = !sender.isSelected
         
         UIView.animate(withDuration: 0.3) { [self] in
-            [toggleGravityButton, replayVideoButton, togglePlayStateButton].forEach { button in
+            [dismissButton, toggleGravityButton, replayVideoButton, togglePlayStateButton].forEach { button in
                 let buttonTransform: CGAffineTransform = {
                     guard !isVideointeractionEnabled else { return .identity }
                     return CGAffineTransform(translationX: lockInteractionsButton.frame.minX - button.frame.minX, y: 0)
@@ -189,6 +198,11 @@ final class VidePlayerViewController: UIViewController {
     @objc private func actionToggleGravity(_ sender: UIButton) {
         guard isVideointeractionEnabled else { return }
         videoPlayerView.toggleGravity()
+    }
+    
+    @objc private func actionDismiss(_ sender: UIButton) {
+        guard isVideointeractionEnabled else { return }
+        dismiss(animated: true)
     }
 
 }

@@ -19,6 +19,8 @@
 		A34621E926856C05007FAACC /* VidePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34621E826856C05007FAACC /* VidePlayerViewController.swift */; };
 		A34621EC26856C37007FAACC /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34621EB26856C37007FAACC /* VideoPlayerView.swift */; };
 		A34621F426857176007FAACC /* VideosListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34621F326857176007FAACC /* VideosListView.swift */; };
+		A34621F6268573FB007FAACC /* VideoURLInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34621F5268573FB007FAACC /* VideoURLInputView.swift */; };
+		A34621F9268584E7007FAACC /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34621F8268584E7007FAACC /* URL+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		A34621E826856C05007FAACC /* VidePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VidePlayerViewController.swift; sourceTree = "<group>"; };
 		A34621EB26856C37007FAACC /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		A34621F326857176007FAACC /* VideosListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosListView.swift; sourceTree = "<group>"; };
+		A34621F5268573FB007FAACC /* VideoURLInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoURLInputView.swift; sourceTree = "<group>"; };
+		A34621F8268584E7007FAACC /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				A34621EF26856D34007FAACC /* Assets */,
+				A34621F726858467007FAACC /* Extensions */,
 				A34621F026856D5B007FAACC /* Persistence */,
 				A325320D267AC9C3007ACEFC /* Videos */,
 				A34621EA26856C33007FAACC /* Views */,
@@ -210,8 +215,17 @@
 			children = (
 				A32531DE267AC2FD007ACEFC /* ContentView.swift */,
 				A34621F326857176007FAACC /* VideosListView.swift */,
+				A34621F5268573FB007FAACC /* VideoURLInputView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A34621F726858467007FAACC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A34621F8268584E7007FAACC /* URL+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,8 +364,10 @@
 				A32531DF267AC2FD007ACEFC /* ContentView.swift in Sources */,
 				A32531DD267AC2FD007ACEFC /* CatVideoPlayerApp.swift in Sources */,
 				A34621EC26856C37007FAACC /* VideoPlayerView.swift in Sources */,
+				A34621F9268584E7007FAACC /* URL+Extension.swift in Sources */,
 				A34621E926856C05007FAACC /* VidePlayerViewController.swift in Sources */,
 				A32531E9267AC2FE007ACEFC /* CatVideoPlayer.xcdatamodeld in Sources */,
+				A34621F6268573FB007FAACC /* VideoURLInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

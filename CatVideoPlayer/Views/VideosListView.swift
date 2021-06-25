@@ -11,32 +11,47 @@ import SwiftUI
 struct VideosListView: View {
     
     @State private var isShowingPlayer = false
+//    private var playerData: VideoPlayerData = .empty
+    @State private var playerURL: URL? = nil
+    @State private var isShowingInputSheet = false
 
     var body: some View {
         NavigationView {
             List {
                 Button("Mouse Game") {
-                    isShowingPlayer.toggle()
+                    playerURL = Bundle.main.url(forResource: "GAME_Catching_Mice", withExtension: "mp4")!
                 }
-                .sheet(isPresented: $isShowingPlayer, content: {
-                    VideoPlayerView(url: Bundle.main.url(forResource: "GAME_Catching_Mice", withExtension: "mp4")!)
-                        .ignoresSafeArea()
-                })
             }
+            //            .navigationTitle("Your Games")
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
-                    Button("First") {
-                        print("Pressed")
-                    }
-                    
                     Spacer()
                     
-                    Button("Second") {
-                        print("Pressed")
+                    Button("Add Video From URL") {
+                        isShowingInputSheet.toggle()
                     }
                 }
             }
+            .sheet(isPresented: $isShowingInputSheet, content: {
+                VideoURLInputView() { url in
+                    playerURL = url
+                    //                    playerData.url = url
+                }
+            })
+            .fullScreenCover(item: $playerURL) {
+                print(">>>PLAYER: ", playerURL)
+            } content: { url in
+                VideoPlayerView(url: url)
+                    .ignoresSafeArea()
+            }
         }
-        
+    }
+}
+
+
+struct VidesListVide_Previews: PreviewProvider {
+    static var previews: some View {
+        VideosListView()
+//        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
